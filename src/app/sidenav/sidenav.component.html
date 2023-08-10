@@ -1,22 +1,64 @@
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
-    <div class="logo-container">
-        <button class="logo" (click)="toggleCollapse()">A</button>
-        <div class="logo-text" @fadeInOut *ngIf="collapsed">Angular</div>
-        <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
-            <i class="fal fa-times close-icon"></i>
-        </button>
-    </div>
-    <ul class="sidenav-nav">
-        <li class="sidenav-nav-item" *ngFor="let data of navData">
-            <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" 
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{exact: true}"
-            >
-                <i class="sidenav-link-icon" [class]="data.icon"></i>
-                <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
-                    {{data.label}}
-                </span>
-            </a>
-        </li>
-    </ul>
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapse()">
+      <svg
+        width="33"
+        height="34"
+        viewBox="0 0 33 34"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <ellipse
+          cx="16.2265"
+          cy="17.124"
+          rx="5.40157"
+          ry="17.5461"
+          transform="rotate(-45 16.2265 17.124)"
+          stroke="#551FFF"
+          stroke-width="2.11163"
+        />
+        <ellipse
+          cx="16.2264"
+          cy="17.1241"
+          rx="5.40157"
+          ry="17.5461"
+          transform="rotate(45 16.2264 17.1241)"
+          stroke="#551FFF"
+          stroke-width="2.11163"
+        />
+        <circle
+          cx="16.2266"
+          cy="17.1241"
+          r="2.50659"
+          stroke="#551FFF"
+          stroke-width="2.11163"
+        />
+      </svg>
+    </button>
+
+    <div class="logo-text" @fadeInOut *ngIf="collapsed">Nucleus</div>
+    <button
+      class="btn-close"
+      @rotate
+      *ngIf="collapsed"
+      (click)="closeSidenav()"
+    >
+      <i class="fal fa-times close-icon"></i>
+    </button>
+  </div>
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <a
+        class="sidenav-nav-link"
+        [routerLink]="[data.routeLink]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <i class="sidenav-link-icon" [class]="data.icon"></i>
+        <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+          {{ data.label }}
+        </span>
+      </a>
+    </li>
+  </ul>
 </div>

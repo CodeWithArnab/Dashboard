@@ -1,37 +1,32 @@
 export const navbarData = [
     {
-        routeLink: 'dashboard',
-        icon: 'fal fa-home',
-        label: 'Dashboard'
+        routeLink: 'profile',
+        icon: 'fal fa-user',
+        label: 'Profile'
     },
     {
-        routeLink: 'products',
-        icon: 'fal fa-box-open',
-        label: 'Products'
+        routeLink: 'billings',
+        icon: 'fal fa-file-invoice-dollar',
+        label: 'Billings'
     },
     {
-        routeLink: 'statistics',
-        icon: 'fal fa-chart-bar',
-        label: 'Statistics'
-    },
-    {
-        routeLink: 'coupens',
-        icon: 'fal fa-tags',
-        label: 'Coupens'
-    },
-    {
-        routeLink: 'pages',
-        icon: 'fal fa-file',
-        label: 'Pages'
-    },
-    {
-        routeLink: 'media',
-        icon: 'fal fa-camera',
-        label: 'Media'
+        routeLink: 'invoices',
+        icon: 'fal fa-wallet',
+        label: 'Invoices'
     },
     {
         routeLink: 'settings',
         icon: 'fal fa-cog',
         label: 'Settings'
+    },
+    {
+        routeLink: 'help',
+        icon: 'fal fa-phone fa-flip-horizontal',
+        label: 'Help'
+    },
+    {
+        routeLink: 'logout',
+        icon: 'fal fa-door-open',
+        label: 'Logout'
     },
 ];

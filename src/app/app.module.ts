@@ -6,12 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProductsComponent } from './products/products.component';
-import { StatisticsComponent } from './statistics/statistics.component';
-import { CoupensComponent } from './coupens/coupens.component';
-import { PagesComponent } from './pages/pages.component';
-import { MediaComponent } from './media/media.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProductsComponent } from './billings/billings.component';
+import { InvoicesComponent } from './invoices/invoices.component';
+import { HelpComponent } from './help/help.component';
+import { LogoutComponent } from './logout/logout.component';
 import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
@@ -19,12 +18,11 @@ import { SettingsComponent } from './settings/settings.component';
     AppComponent,
     BodyComponent,
     SidenavComponent,
-    DashboardComponent,
+    ProfileComponent,
     ProductsComponent,
-    StatisticsComponent,
-    CoupensComponent,
-    PagesComponent,
-    MediaComponent,
+    InvoicesComponent,
+    HelpComponent,
+    LogoutComponent,
     SettingsComponent
   ],
   imports: [

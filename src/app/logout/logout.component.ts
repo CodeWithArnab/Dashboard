@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pages',
-  templateUrl: './pages.component.html',
-  styleUrls: ['./pages.component.scss']
+  templateUrl: './logout.component.html',
+  styleUrls: ['./logout.component.scss']
 })
-export class PagesComponent implements OnInit {
+export class LogoutComponent implements OnInit {
 
   constructor() { }
 
