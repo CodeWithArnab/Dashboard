@@ -21,7 +21,15 @@ body {
     background-color: #fff;
     margin: 1.25rem 0 1.25rem 0;
     box-shadow: 0 .25rem .5rem #e6edef;
+    padding: 2rem;
+    flex-wrap: wrap;
+    &.card-row{
+        gap: 2rem;
+        flex-direction: row;
+        // gap: 2rem;
+        justify-content: space-between;
 
+    }
     .card-head {
         padding: 1rem 1.5rem;
         border-bottom: 1px solid #edf1f7;

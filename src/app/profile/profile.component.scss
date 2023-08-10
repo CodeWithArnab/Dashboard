@@ -1,0 +1,50 @@
+$gray: #d0d2da;
+$darkGray:#92959E;
+.sub-heading-text {
+  font-size: 0.75rem;
+  color: $gray;
+}
+.small-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  align-items: center;
+  gap: 1rem;
+  min-width: 8rem;
+  width: max-content;
+}
+.small-card-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //   margin-left: 1rem;
+  font-size: 0.75rem;
+  height: 2.5rem;
+  color: $darkGray;
+  span:last-child{
+    font-size: 0.75rem;
+    color: #000;
+  }
+}
+.small-card-image {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11.262px;
+  opacity: 0.65;
+  &.projects {
+    background: #fff2e9;
+  }
+  &.users {
+    background: #eaf9ff;
+  }
+  &.requests {
+    background: #ede8ff;
+  }
+  &.storage {
+    background: #ffebef;
+  }
+}
