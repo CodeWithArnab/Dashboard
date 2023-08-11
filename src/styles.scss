@@ -10,6 +10,7 @@
 }
 
 body {
+    background: #f4f7fa;
     position: relative;
     font-family: 'averta', sans-serif;
 }
@@ -24,6 +25,7 @@ body {
     padding: 2rem;
     flex-wrap: wrap;
     &.card-row{
+        width: 100%;
         gap: 2rem;
         flex-direction: row;
         // gap: 2rem;
