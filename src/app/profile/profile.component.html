@@ -267,7 +267,55 @@
   </div>
   <div class="right-part">
     <div class="card">
-      <h4>Activity</h4>
+      <div class="current-plan-header">
+        <h4>Activity</h4>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="4"
+          height="16"
+          viewBox="0 0 4 16"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M3.0202 2.53571C3.0202 1.95266 2.54743 1.47989 1.96439 1.47989C1.38134 1.47989 0.908569 1.95266 0.908569 2.53571C0.908569 3.11875 1.38134 3.59152 1.96439 3.59152C2.54743 3.59152 3.0202 3.11875 3.0202 2.53571Z"
+            stroke="#92959E"
+            stroke-width="1.05582"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M3.0202 8.16675C3.0202 7.5837 2.54743 7.11093 1.96439 7.11093C1.38134 7.11093 0.908569 7.5837 0.908569 8.16675C0.908569 8.7498 1.38134 9.22257 1.96439 9.22257C2.54743 9.22257 3.0202 8.7498 3.0202 8.16675Z"
+            stroke="#92959E"
+            stroke-width="1.05582"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M3.0202 13.7978C3.0202 13.2147 2.5478 12.7419 1.96475 12.7419C1.38134 12.7419 0.908569 13.2147 0.908569 13.7978C0.908569 14.3808 1.38134 14.8536 1.96475 14.8536C2.5478 14.8536 3.0202 14.3808 3.0202 13.7978Z"
+            stroke="#92959E"
+            stroke-width="1.05582"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="activity-container">
+        <div *ngFor="let activity of activityData" class="activity-item">
+          <div class="avatar">
+            <img [src]="activity.img" alt="Avatar">
+          </div>
+          <div class="activity-details">
+            <p class="username">{{ activity.username }}</p>
+            <p class="log">{{ activity.log }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

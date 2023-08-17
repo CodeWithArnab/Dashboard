@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
+import { activityData } from './activity-data';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { Chart } from 'chart.js';
 export class ProfileComponent implements OnInit {
   chart: any;
   pieChart:any;
+  activityData=activityData;
   pieLabels=["Re-used APIs","Webhooks","API Calls"];
   pieData=[36, 38, 25];
   time = [
