@@ -103,8 +103,165 @@
     </div>
     <div class="card chart">
       <h4>API calls in last 6 hours</h4>
+
       <div class="chart-container">
         <canvas id="api-calls"></canvas>
+      </div>
+    </div>
+    <div class="bottom-chart-container">
+      <div class="pie-chart-container">
+        <div class="card chart">
+          <div class="current-plan-header">
+            <h4>P&L</h4>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+              >
+                <path
+                  d="M5.33771 9.20341H0.902771"
+                  stroke="#92959E"
+                  stroke-width="1.05582"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.31583 2.38104H11.7508"
+                  stroke="#92959E"
+                  stroke-width="1.05582"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.20878 2.34294C4.20878 1.43096 3.46397 0.691467 2.54542 0.691467C1.62687 0.691467 0.88205 1.43096 0.88205 2.34294C0.88205 3.25493 1.62687 3.99442 2.54542 3.99442C3.46397 3.99442 4.20878 3.25493 4.20878 2.34294Z"
+                  stroke="#92959E"
+                  stroke-width="1.05582"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.1441 9.17585C12.1441 8.26386 11.3998 7.52437 10.4813 7.52437C9.56217 7.52437 8.81735 8.26386 8.81735 9.17585C8.81735 10.0878 9.56217 10.8273 10.4813 10.8273C11.3998 10.8273 12.1441 10.0878 12.1441 9.17585Z"
+                  stroke="#92959E"
+                  stroke-width="1.05582"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <span class="sub-heading-text">Total profit growth of 25%</span>
+          <div class="pie-chart-contaier chart-container">
+            <canvas id="pie-chart"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="current-plan-container">
+        <div class="card">
+          <div class="current-plan-header">
+            <h4>Current Plan</h4>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+                fill="none"
+              >
+                <path
+                  d="M5.33771 9.20341H0.902771"
+                  stroke="#92959E"
+                  stroke-width="1.05582"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.31583 2.38104H11.7508"
+                  stroke="#92959E"
+                  stroke-width="1.05582"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.20878 2.34294C4.20878 1.43096 3.46397 0.691467 2.54542 0.691467C1.62687 0.691467 0.88205 1.43096 0.88205 2.34294C0.88205 3.25493 1.62687 3.99442 2.54542 3.99442C3.46397 3.99442 4.20878 3.25493 4.20878 2.34294Z"
+                  stroke="#92959E"
+                  stroke-width="1.05582"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.1441 9.17585C12.1441 8.26386 11.3998 7.52437 10.4813 7.52437C9.56217 7.52437 8.81735 8.26386 8.81735 9.17585C8.81735 10.0878 9.56217 10.8273 10.4813 10.8273C11.3998 10.8273 12.1441 10.0878 12.1441 9.17585Z"
+                  stroke="#92959E"
+                  stroke-width="1.05582"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <span class="sub-heading-text"
+            >Information and usages of your current plan</span
+          >
+
+          <div class="pricing">
+            <div class="sub">
+              <div class="user-symbol">
+                <i class="fal fa-users" style="color: #00b7fe"></i>
+              </div>
+              <div class="sub-text">
+                <span>Teams Plan</span>
+                <span class="sub-text-secondary">$99/mo</span>
+              </div>
+            </div>
+            <div>
+              <i class="fal fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-projects">
+              <div class="progress-bar-sub-heading">
+                <span>Projects</span>
+                <span>1/3</span>
+              </div>
+              <mat-progress-bar
+                mode="determinate"
+                value="33.333"
+              ></mat-progress-bar>
+            </div>
+            <div class="progress-users">
+              <div class="progress-bar-sub-heading">
+                <span>Users</span>
+                <span>1/5</span>
+              </div>
+              <mat-progress-bar
+                mode="determinate"
+                color="accent"
+                value="75"
+              ></mat-progress-bar>
+            </div>
+            <div class="progress-requests">
+              <div class="progress-bar-sub-heading">
+                <span>Requests/Day</span>
+                <span>7.5k/10k</span>
+              </div>
+              <mat-progress-bar
+                mode="determinate"
+                color=""
+                value="50"
+              ></mat-progress-bar>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

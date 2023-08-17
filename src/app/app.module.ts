@@ -12,13 +12,14 @@ import { InvoicesComponent } from './invoices/invoices.component';
 import { HelpComponent } from './help/help.component';
 import { LogoutComponent } from './logout/logout.component';
 import { SettingsComponent } from './settings/settings.component';
+import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     BodyComponent,
     SidenavComponent,
-    ProfileComponent,
+    // ProfileComponent,
     ProductsComponent,
     InvoicesComponent,
     HelpComponent,
@@ -28,7 +29,8 @@ import { SettingsComponent } from './settings/settings.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
