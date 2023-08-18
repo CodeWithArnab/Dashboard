@@ -7,7 +7,7 @@ const port = process.env.PORT || 3001;
 app.use(cors()); //allow cross origin requests from any domain to access this server
 
 app.use(express.urlencoded({ extended: true })); //parse urlencoded data from request body
-app.get("/data", (req, res) => {
+app.get("/", (req, res) => {
   console.log(data);
   res.send(data);
 });
