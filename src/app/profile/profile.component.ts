@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { activityData } from './activity-data';
-
+import { HttpClient } from '@angular/common/http';
+import { MyDataService } from './my-data.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,31 +13,45 @@ import { activityData } from './activity-data';
 })
 export class ProfileComponent implements OnInit {
   chart: any;
-  pieChart:any;
-  activityData=activityData;
-  pieLabels=["Re-used APIs","Webhooks","API Calls"];
-  pieData=[36, 38, 25];
-  time = [
-    '10:30 AM',
-    '11:30 AM',
-    '12:30 PM',
-    '1:30 PM',
-    '2:30 PM',
-    '3:30 PM',
-    '4:30 PM',
-    '5:30 PM',
-  ];
-  apiCalls = [3000, 4500, 5000, 7546, 7000, 8000, 6400, 9000];
-  constructor() {}
+  pieChart: any;
+  myData:any;
+  activityData :any;
+  pieLabels :any;
+  pieData :any;
+  time :any;
+  apiCalls :any;
+
+  constructor(private myDataService:MyDataService) {}
+
+  
 
   ngOnInit(): void {
+    // this.getUserData();
+    this.myDataService.getData()
+    .subscribe((data)=>{
+      this.myData=data;
+      console.log(this.myData);
+      this.createApiCallsChart();
+      this.createPieChart();
+      this.activityData = this?.myData?.activityData;
+
+    })
+    
+    
+
+    
+  }
+  createApiCallsChart() {
+    const time = this.myData?.apiCallData?.time;
+    const apiCalls = this.myData?.apiCallData?.apiCalls;
+
     this.chart = new Chart('api-calls', {
       type: 'line',
       data: {
-        labels: this.time,
+        labels: time,
         datasets: [
           {
-            data: this.apiCalls,
+            data: apiCalls,
             borderColor: '#7549FF',
             fill: false,
           },
@@ -57,8 +72,6 @@ export class ProfileComponent implements OnInit {
                 display: false,
               },
             },
-            
-            
           ],
         },
         legend: {
@@ -66,18 +79,20 @@ export class ProfileComponent implements OnInit {
         },
       },
     });
-    
+  }
+  createPieChart() {
+    const pieLabels = this.myData?.plData?.pieLabels;
+    const pieData = this.myData?.plData?.pieData;
+
     this.pieChart = new Chart('pie-chart', {
       type: 'doughnut',
       data: {
-        labels: this.pieLabels,
+        labels: pieLabels,
         datasets: [
           {
-            data: this.pieData,
+            data: pieData,
             backgroundColor: ['#FD2254', '#00B7FE', '#D0D2DA'],
-            borderAlign:'center',
-            
-            
+            borderAlign: 'center',
           },
         ],
       },
@@ -92,6 +107,5 @@ export class ProfileComponent implements OnInit {
         },
       },
     });
-    
   }
 }

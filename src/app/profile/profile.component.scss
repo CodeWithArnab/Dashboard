@@ -53,6 +53,7 @@ $darkGray: #92959e;
   display: flex;
   justify-content: space-between;
   .calendar {
+    cursor: pointer;
     background-color: #e6e6e8;
     padding: 0.5rem;
     border-radius: 0.5rem;

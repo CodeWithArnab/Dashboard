@@ -4,6 +4,14 @@
     <i class="fal fa-calendar"></i>
     <span>Wednesday, 17 May 2021</span>
     <i class="fal fa-chevron-down"></i>
+    <!-- <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      
+    </mat-form-field> -->
   </div>
 </div>
 <span class="sub-heading-text"
@@ -31,7 +39,7 @@
         </div>
         <div class="small-card-desc">
           <span>Projects</span>
-          <span>3</span>
+          <span>{{myData?.userData?.projects}}</span>
         </div>
       </div>
       <div class="small-card requests">
@@ -53,7 +61,7 @@
         </div>
         <div class="small-card-desc">
           <span>Requests</span>
-          <span>3456</span>
+          <span>{{myData?.userData?.requests}}</span>
         </div>
       </div>
       <div class="small-card users">
@@ -75,7 +83,7 @@
         </div>
         <div class="small-card-desc">
           <span>Users</span>
-          <span>3</span>
+          <span>{{myData?.userData?.users}}</span>
         </div>
       </div>
       <div class="small-card storage">
@@ -97,7 +105,7 @@
         </div>
         <div class="small-card-desc">
           <span>Storage</span>
-          <span>128/500 GB</span>
+          <span>{{myData?.userData?.storage}} GB</span>
         </div>
       </div>
     </div>
@@ -220,7 +228,7 @@
               </div>
               <div class="sub-text">
                 <span>Teams Plan</span>
-                <span class="sub-text-secondary">$99/mo</span>
+                <span class="sub-text-secondary">${{myData?.currentPlanData?.pricing}}/mo</span>
               </div>
             </div>
             <div>
@@ -235,7 +243,7 @@
               </div>
               <mat-progress-bar
                 mode="determinate"
-                value="33.333"
+                value={{myData?.currentPlanData?.projects}}
               ></mat-progress-bar>
             </div>
             <div class="progress-users">
@@ -246,7 +254,7 @@
               <mat-progress-bar
                 mode="determinate"
                 color="accent"
-                value="75"
+                value={{myData?.currentPlanData?.users}}
               ></mat-progress-bar>
             </div>
             <div class="progress-requests">
@@ -257,7 +265,7 @@
               <mat-progress-bar
                 mode="determinate"
                 color=""
-                value="50"
+                value={{myData?.currentPlanData?.requests}}
               ></mat-progress-bar>
             </div>
           </div>

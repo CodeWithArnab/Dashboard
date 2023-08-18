@@ -13,6 +13,8 @@ import { HelpComponent } from './help/help.component';
 import { LogoutComponent } from './logout/logout.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProfileModule } from './profile/profile.module';
+import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { ProfileModule } from './profile/profile.module';
     InvoicesComponent,
     HelpComponent,
     LogoutComponent,
-    SettingsComponent
+    SettingsComponent,
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule
 
   ],
   providers: [],
