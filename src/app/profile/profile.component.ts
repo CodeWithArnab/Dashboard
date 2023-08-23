@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,PLATFORM_ID,Inject } from '@angular/core';
 import { Chart } from 'chart.js';
 import { activityData } from './activity-data';
 import { HttpClient } from '@angular/common/http';
 import { MyDataService } from './my-data.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,7 +22,7 @@ export class ProfileComponent implements OnInit {
   time :any;
   apiCalls :any;
 
-  constructor(private myDataService:MyDataService) {}
+  constructor(private myDataService:MyDataService,@Inject(PLATFORM_ID) private platformId: Object) {}
 
   
 
@@ -30,9 +31,11 @@ export class ProfileComponent implements OnInit {
     this.myDataService.getData()
     .subscribe((data)=>{
       this.myData=data;
-      console.log(this.myData);
+      // console.log(this.myData);
+      if (isPlatformBrowser(this.platformId)) {
       this.createApiCallsChart();
       this.createPieChart();
+      }
       this.activityData = this?.myData?.activityData;
 
     })
