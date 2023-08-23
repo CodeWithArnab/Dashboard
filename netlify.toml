@@ -1,6 +1,6 @@
 [build]
-  publish = "dist/sidenav"
-  command = "ng build"
+  publish = "dist/sidenav/browser"
+  command = "npm run prerender"
 [[redirects]]
   from = "/*"
   to = "/index.html"
